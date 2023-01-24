@@ -10,34 +10,37 @@
 <body>
     <h1>Welcome to Joseph's Airlines</h1>
 
-    <label for="type-trip">Choose round trip or one way</label>
-    <select id="selectType">
-        <option value="roundTrip">Round Trip</option>
-        <option value="oneWay">One Way</option>
-    </select>
-
-    <div>
-    <label>Departing From:</label>
-    <input type="text">
-    </div>
-
-    <div>
-        <label>Destination:</label>
-        <input type="text">
-    </div>
-    <div>
-        <lable>Amount of Passangers</lable>
-        <input type="number">
-    </div>
-    <div>
-        <label for="aClass">Choose Flight Class</label>
-        <select>
-            <option value="economy">Economy</option>
-            <option value="premuinE">Premium Economy</option>
-            <option value="bussiness">Bussiness</option>
-            <option value="firstClass">First Class</option>
+    <form action="ticketP.html" method="post" id="ticketI">
+        <label for="type-trip">Choose round trip or one way</label>
+        <select id="selectType">
+            <option value="roundTrip">Round Trip</option>
+            <option value="oneWay">One Way</option>
         </select>
-    </div>
-    <div id="" class="button">Submit</div>
+
+        <div>
+        <label>Departing From:</label>
+        <input type="text">
+        </div>
+
+        <div>
+            <label>Destination:</label>
+            <input type="text">
+        </div>
+        <div>
+            <lable>Amount of Passangers</lable>
+            <input type="number">
+        </div>
+        <div>
+            <label for="aClass">Choose Flight Class</label>
+            <select>
+                <option value="economy">Economy</option>
+                <option value="premuinE">Premium Economy</option>
+                <option value="bussiness">Bussiness</option>
+                <option value="firstClass">First Class</option>
+            </select>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+    
 </body>
 </html>
