@@ -10,3 +10,8 @@
     background-color: aqua;
     cursor: pointer;
 }
+
+.box {
+    border : 2px gray solid;
+    
+}
