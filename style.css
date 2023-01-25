@@ -22,6 +22,11 @@
     background-size: cover;
 }
 
+.location {
+    position: relative;
+    left: 40%;
+}
+
 #ticket1{
     background-color: white;
     border: 2px black solid;
