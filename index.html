@@ -10,9 +10,9 @@
 <body>
     <h1>Welcome to Joseph's Airlines</h1>
 
-    <form action="ticketP.html" method="post" id="ticketI">
+    <form action="ticketP.html" name="selectF" method="Get" id="ticketI">
         <label for="type-trip">Choose round trip or one way</label>
-        <select id="selectType">
+        <select id="selectType" name="selectType">
             <option value="roundTrip">Round Trip</option>
             <option value="oneWay">One Way</option>
         </select>
@@ -39,8 +39,7 @@
                 <option value="firstClass">First Class</option>
             </select>
         </div>
-        <input type="submit" value="Submit">
-
+        <input type="submit" value="Submit" name="submitB" onclick="testResults(this.form)">
     </form>
     
 </body>
