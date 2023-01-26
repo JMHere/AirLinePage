@@ -3,12 +3,13 @@
 <head>
     <title>Booking</title>
     <link href="style.css" rel="stylesheet">
+    <script src="index.js" defer></script>
 </head>
 <body>
     <div class="pHeader">
     <h1>BOOK A FLIGHT</h1>
     </div>
-    <form action="ticketP.html" name="selectF" method="Get" id="ticketI">
+    <!-- <form action="" name="selectF" method="post" id="ticketI"> -->
         <div class="ticketF">
             <label class="form-label" for="type-trip">Choose round trip or one way</label>
             <select id="selectType" name="selectType">
@@ -18,7 +19,7 @@
 
             <div>
             <label class="form-label" for="depart" >Departing From:</label>
-            <select>
+            <select id="depart">
                 <option value="SaltLake">Salt Lake (UT)</option>
                 <option value="LosAngeles">Los Angeles (CA)</option>
             </select>
@@ -26,27 +27,27 @@
 
             <div>
                 <label class="form-label" >Destination:</label>
-                <select>
+                <select id="destination">
                     <option value="SaltLake">Salt Lake (UT)</option>
                     <option value="LosAngeles">Los Angeles (CA)</option>
                 </select>
             </div>
             <div>
                 <label class="form-label" >Amount of Passangers</label>
-                <input type="number">
+                <input type="number" id="aPassanger">
             </div>
             <div>
                 <label class="form-label" for="aClass">Choose Flight Class</label>
-                <select>
+                <select id="class">
                     <option value="economy">Economy</option>
                     <option value="premuinE">Premium Economy</option>
                     <option value="bussiness">Bussiness</option>
                     <option value="firstClass">First Class</option>
                 </select>
             </div>
-            <input type="submit" value="Submit" name="submitB">
+            <input type="submit" value="Submit" name="submitB" onclick="finalForm()">
         </div>
-    </form>
+    <!-- </form> -->
     
 </body>
 </html>
