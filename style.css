@@ -16,8 +16,15 @@
     
 }
 
-.body{
-    background-image: url(https://thumbs.dreamstime.com/b/travel-concept-blue-toy-airplane-notepad-background-light-as-border-flat-lay-copy-space-air-planning-ticket-fare-185640956.jpg);
+html{
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url(https://img.freepik.com/free-photo/miniature-airplane-travel-theme_93675-128391.jpg?w=2000);
     background-repeat: no-repeat;
     background-size: cover;
 }
