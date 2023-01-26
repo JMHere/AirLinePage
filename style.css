@@ -76,8 +76,43 @@ input, label {
     padding: 2%;
 }
 
-.ticketF div {
+.cNav {
+    background-color: black;
+    border: 2px gray solid;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.cSelect{
+    background-color: lightgray;
+}
+
+.dropbtn {
+    background-color: gray;
+    color: white;
+    font-size: large;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: black;
+}
+
+.dropdown-content a {
+    color: white;
+    text-decoration: none;
+}
+
+.show {
     display: block;
 }
 
+li {
+    list-style: none;
+}
 

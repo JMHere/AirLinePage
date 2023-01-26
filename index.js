@@ -10,3 +10,7 @@ function finalForm() {
     console.log(tripT.value, depart.value, destination.value, aPassangers.value, cClass.value)
 }
 
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
