@@ -17,9 +17,21 @@
 }
 
 .body{
-    background-image: url(https://thumbs.dreamstime.com/b/travel-concept-blue-toy-airplane-notepad-background-light-as-border-flat-lay-copy-space-air-planning-ticket-fare-185640956.jpg);
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url(https://img.freepik.com/free-photo/miniature-airplane-travel-theme_93675-128391.jpg?w=2000);
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.location {
+    position: relative;
+    left: 40%;
 }
 
 #ticket1{
@@ -37,3 +49,70 @@
     background-color: aqua;
     cursor: pointer;
 }
+
+.pHeader {
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+input, label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.ticketF {
+    border-radius: 5px;
+    background-color: lightgray;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    left: 25% ;
+    right: 25%;
+    padding: 2%;
+}
+
+.cNav {
+    background-color: black;
+    border: 2px gray solid;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.cSelect{
+    background-color: lightgray;
+}
+
+.dropbtn {
+    background-color: gray;
+    color: white;
+    font-size: large;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: black;
+}
+
+.dropdown-content a {
+    color: white;
+    text-decoration: none;
+}
+
+.show {
+    display: block;
+}
+
+li {
+    list-style: none;
+}
+

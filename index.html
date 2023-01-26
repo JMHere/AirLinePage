@@ -1,46 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Booking</title>
     <link href="style.css" rel="stylesheet">
+    <script src="index.js" defer></script>
+    <nav class="cNav">
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Pages</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="home.html">Home</a>
+            </div>
+        </div>
+    </nav>
 </head>
 <body>
-    <h1>Welcome to Joseph's Airlines</h1>
 
-    <form action="ticketP.html" name="selectF" method="Get" id="ticketI">
-        <label for="type-trip">Choose round trip or one way</label>
-        <select id="selectType" name="selectType">
-            <option value="roundTrip">Round Trip</option>
-            <option value="oneWay">One Way</option>
-        </select>
-
-        <div>
-        <label>Departing From:</label>
-        <input type="text">
-        </div>
-
-        <div>
-            <label>Destination:</label>
-            <input type="text">
-        </div>
-        <div>
-            <lable>Amount of Passangers</lable>
-            <input type="number">
-        </div>
-        <div>
-            <label for="aClass">Choose Flight Class</label>
-            <select>
-                <option value="economy">Economy</option>
-                <option value="premuinE">Premium Economy</option>
-                <option value="bussiness">Bussiness</option>
-                <option value="firstClass">First Class</option>
+    <div class="pHeader">
+    <h1>BOOK A FLIGHT</h1>
+    </div>
+    <!-- <form action="" name="selectF" method="post" id="ticketI"> -->
+        <div class="ticketF">
+            <label class="form-label" for="type-trip">Choose round trip or one way</label>
+            <select id="selectType" name="selectType">
+                <option value="roundTrip">Round Trip</option>
+                <option value="oneWay">One Way</option>
             </select>
+
+            <div>
+            <label class="form-label" for="depart" >Departing From:</label>
+            <select id="depart">
+                <option value="SaltLake">Salt Lake (UT)</option>
+                <option value="LosAngeles">Los Angeles (CA)</option>
+            </select>
+            </div>
+
+            <div>
+                <label class="form-label" >Destination:</label>
+                <select id="destination">
+                    <option value="SaltLake">Salt Lake (UT)</option>
+                    <option value="LosAngeles">Los Angeles (CA)</option>
+                </select>
+            </div>
+            <div>
+                <label class="form-label" >Amount of Passangers</label>
+                <input type="number" id="aPassanger">
+            </div>
+            <div>
+                <label class="form-label" for="aClass">Choose Flight Class</label>
+                <select id="class">
+                    <option value="economy">Economy</option>
+                    <option value="premuinE">Premium Economy</option>
+                    <option value="bussiness">Bussiness</option>
+                    <option value="firstClass">First Class</option>
+                </select>
+            </div>
+            <input type="submit" value="Submit" name="submitB" onclick="finalForm()">
         </div>
-        <input type="submit" value="Submit" name="submitB" onclick="testResults(this.form)">
-    </form>
+    <!-- </form> -->
     
 </body>
 </html>
