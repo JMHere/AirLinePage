@@ -8,7 +8,7 @@
     <link href="style.css" rel="stylesheet">
     <script src="index.js"></script>
 </head>
-<body class="body" method="get">
+<body class="body">
     <h1>Ticket Page</h1>
     <div class="location">
         <lable>Choose seat Location: </lable>
@@ -18,14 +18,17 @@
             <option>First</option>
         </select>
     </div>
-
+    <!-- <%= %> -->
+    <% ticketsOut.forEach(function(select){%>
     <div id="ticket1">
         <p id="times">Time of Departure - Time of Arrival</p>
-        <p id="departure">Departure Location - Arrival Destination</p>
-        <p>Current Date</p>
+        <p id="departure"><%= select.depart %> - <%= select.destination %></p>
+        <div> <%= select.selectType %></div>
         <p>Flight Time</p>
-        <p>Flight Class Type</p>
+        <p><%= select.class %></p>
         <p>Price</p>
     </div>
+    <% })%>
+
 </body>
 </html>

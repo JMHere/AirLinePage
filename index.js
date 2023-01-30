@@ -1,21 +1,24 @@
+const express = require("express")
+const path = require("path")
+const bodyParser = require("body-parser")
+const ticket = require("./tick")
+const app = express()
 
-const tripT = document.getElementById("selectType")
-const depart = document.getElementById("depart")
-const destination = document.getElementById("destination")
-const aPassangers = document.getElementById("aPassanger")
-const cClass = document.getElementById("class")
-const times = document.getElementById("times")
-const departure = document.getElementById("departure")
+const urlencodedParser = bodyParser.urlencoded({
+    extended: true
+})
 
-function finalForm() {
-    console.log(tripT.value, depart.value, destination.value, aPassangers.value, cClass.value)
-    ticket()
-}
+app.use(express.static(path.join(__dirname, '/public')))
 
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'ejs')
 
-function ticket() {
-    departure.innerHTML = depart.value
-}
+app.get('/', function(req, res, next){
+    res.render('index')
+})
+app.get('/home', function(req, res, next){
+    res.render('home')
+})
+app.post('/ticketP', urlencodedParser, ticket.getData)
+
+app.listen(3000)
