@@ -50,6 +50,11 @@
     cursor: pointer;
 }
 
+#link{
+    text-decoration: none;
+    color: black;
+}
+
 .pHeader {
     border-radius: 10px;
     background-color: black;
