@@ -1,12 +1,14 @@
 const {response} = require('express')
 
 const tickets = [
-    {selectType: "OneWay",
+    { id: 1,
+    selectType: "OneWay",
     depart: "SaltLake",
     destination: "LosAngeles",
     class: "Basic",
     }, 
-    {selectType: "OneWay",
+    { id: 2,
+    selectType: "OneWay",
     depart: "SaltLake",
     destination: "LosAngeles",
     class: "First Class"}
@@ -29,3 +31,18 @@ exports.getData = (req, res, next) => {
             ticketsOut : info2,
         })
     }
+
+    let bTicket;
+
+exports.PpId = (req, res ,next) => {
+
+    tickets.forEach(function(ticket) {
+        if (ticket.id == req.params.id) {
+            bTicket = ticket
+        }
+    })
+
+    res.render('purchasePage', {
+        "ticket": bTicket
+    }) 
+}
