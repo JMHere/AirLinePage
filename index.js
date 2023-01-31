@@ -16,11 +16,16 @@ app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
 app.get('/', function(req, res, next){
-    res.render('index')
+    res.render('index') 
 })
 app.get('/home', function(req, res, next){
     res.render('home')
 })
+
+app.get('/log', function(req, res, next){
+    res.render('sign-up')
+})
+
 app.post('/ticketP', urlencodedParser, ticket.getData)
 app.get('/purchasePage', function(req, res ,next){
     res.render('purchasePage')
