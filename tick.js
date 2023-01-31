@@ -142,3 +142,18 @@ exports.getData = (req, res, next) => {
             ticketsOut : info2,
         })
     }
+
+    let bTicket;
+
+exports.PpId = (req, res ,next) => {
+
+    tickets.forEach(function(ticket) {
+        if (ticket.id == req.params.id) {
+            bTicket = ticket
+        }
+    })
+
+    res.render('purchasePage', {
+        "ticket": bTicket
+    }) 
+}

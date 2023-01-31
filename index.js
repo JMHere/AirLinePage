@@ -27,9 +27,7 @@ app.get('/log', function(req, res, next){
 })
 
 app.post('/ticketP', urlencodedParser, ticket.getData)
-app.get('/purchasePage', function(req, res ,next){
-    res.render('purchasePage')
-})
+app.get('/purchasePage/:id', ticket.PpId)
 app.listen(3000)
 
 
