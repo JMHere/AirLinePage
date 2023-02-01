@@ -13,7 +13,7 @@
 
 .box {
     border : 2px gray solid;
-    
+    background-color: black;
 }
 
 .body{
@@ -120,4 +120,3 @@ input, label {
 li {
     list-style: none;
 }
-
