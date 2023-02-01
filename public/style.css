@@ -69,6 +69,10 @@ input, label {
     margin-bottom: 5px;
 }
 
+.labelC {
+    font: bold;
+}
+
 .ticketF {
     border-radius: 5px;
     background-color: lightgray;
@@ -119,4 +123,8 @@ input, label {
 
 li {
     list-style: none;
+}
+
+.Cinfo {
+    border: 2px black solid;
 }

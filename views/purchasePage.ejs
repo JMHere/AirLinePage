@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>Purchase Ticket</title>
-    <link href="style.css" rel="stylesheet">
+    <link type="text/css" href="style.css" rel="stylesheet">
 </head>
 <body>
     <h1>Purchase Ticket</h1>
@@ -10,24 +10,9 @@
     <div class="box">
         <h2> Ticket </h2>
         <p><%= ticket.depart%> - <%= ticket.destination %></p>
-        <p> <%= ticket.selectType %> </p>
-        <p> <%= ticket.class %> </p>
+        <p><%= ticket.selectType %></p>
+        <p><%= ticket.class %></p>
     </div>
-    <div>
-        <form>
-            <label>First Name:</label>
-            <input type="text">
 
-            <label>Last Name:</label>
-            <input type="text">
-
-            <label>Email: </label>
-            <input type="text">
-
-            <label>Phone Number: </label>
-            <input type="text">
-        </form>
-
-    </div>
 </body>
 </html>
