@@ -17,7 +17,6 @@
     </div>
     <div id="tickDiv">
     <% ticketsOut.forEach(function(select){%>
-    <a href="<%= `/purchasePage/${select.id}` %>" id="link">
         <div id="ticket1">
             <p id="departure"><%= select.depart %> - <%= select.destination %></p>
             <div> <%= select.selectType %></div>
