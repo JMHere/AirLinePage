@@ -18,18 +18,16 @@
             <option>First</option>
         </select>
     </div>
-    <!-- <%= %> -->
+    <div id="tickDiv">
     <% ticketsOut.forEach(function(select){%>
-    <a href="/purchasePage" id="link">
         <div id="ticket1">
-            <p id="times">Time of Departure - Time of Arrival</p>
             <p id="departure"><%= select.depart %> - <%= select.destination %></p>
             <div> <%= select.selectType %></div>
-            <p>Flight Time</p>
             <p><%= select.class %></p>
             <p>Price</p>
+            <a href="<%= `/purchasePage/${select.id}` %>" id="link">Purchase</a>
         </div>
-    </a>
     <% })%>
+    </div>
 </body>
 </html>
