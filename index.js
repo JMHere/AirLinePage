@@ -36,6 +36,10 @@ app.get('/im2', function (req, res) {
     res.sendFile(path.join(__dirname, '/public/imgs/planeSeat.png'));
 });
 
+app.get('/im3', function (req, res) {
+    res.sendFile(path.join(__dirname, '/public/imgs/airport.pdf'));
+});
+
 
 app.post('/ticketP', urlencodedParser, ticket.getData)
 
