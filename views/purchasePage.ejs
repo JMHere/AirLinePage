@@ -2,16 +2,63 @@
 <html lang="en">
 <head>
     <title>Purchase Ticket</title>
-    <link type="text/css" href="style.css" rel="stylesheet">
+    <link href="/public/style.css" rel="stylesheet">
+    <script src="index.js"></script>
+    <style>
+        .cNav{
+            background-color: black;
+            border: 2px gray solid;
+            border-radius: 5px;
+            padding: 2px;}
+        .dropbtn {
+            background-color: gray;
+            color: white;
+            font-size: large;}
+        .dropdown{
+            position: relative;
+            display: inline-block;}
+        .dropdown-content{
+            display: none;
+            background-color: black;}
+        .dropdown-content a {
+            color: white;
+            text-decoration: none;}
+        .show {
+            display: block;}
+    </style>
+    <nav class="cNav">
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Pages</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="/">Booking Page</a>
+            </div>
+        </div>
+        <script>
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+        </script>
+    </nav>
 </head>
-<body>
+<body id="borderS">
     <h1>Purchase Ticket</h1>
-    <div class="box">
-        <h2> Ticket </h2>
+    <style>
+        #tick {background-color: white;
+            border: 2px black solid;
+            border-radius: 2px;
+            width: 400px;
+            left: 40%;
+            padding: 5px;
+            margin: auto;}
+    </style>
+    <h2>Thank you for purchasing your ticket with us! We hope you come back soon and fly with Joseph's Airline.</h1>
+    <h2>You can see your ticket details down below.</h1>
+
+    <h3> Ticket </h2>
+    <div id="tick">
         <p><%= ticket.depart%> - <%= ticket.destination %></p>
         <p><%= ticket.selectType %></p>
         <p><%= ticket.class %></p>
     </div>
-
 </body>
 </html>

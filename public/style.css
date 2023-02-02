@@ -11,10 +11,6 @@
     cursor: pointer;
 }
 
-.box {
-    border : 2px gray solid;
-    background-color: black;
-}
 
 .body{
     min-height: 100%;
@@ -33,6 +29,10 @@
 .location {
     position: relative;
     left: 40%;
+}
+
+#borderS{
+    background-color: black;
 }
 
 #tickDiv{
