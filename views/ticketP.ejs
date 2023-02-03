@@ -4,17 +4,22 @@
     <title>Tickets</title>
     <link href="style.css" rel="stylesheet">
     <script src="index.js"></script>
+    <nav class="cNav">
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Pages</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="/home">Home</a>
+            </div>
+        </div>
+        <script>
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
+            }
+        </script>
+    </nav>
 </head>
 <body class="body">
-    <h1>Ticket Page</h1>
-    <div class="location">
-        <lable>Choose seat Location: </lable>
-        <select>
-            <option>Main</option>
-            <option>Comfort+</option>
-            <option>First</option>
-        </select>
-    </div>
+    <h1 class="titleP">Ticket Page</h1>
     <div id="tickDiv">
     <% ticketsOut.forEach(function(select){%>
         <div id="ticket1">
