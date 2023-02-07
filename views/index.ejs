@@ -18,7 +18,6 @@
     </nav>
 </head>
 <body>
-
     <div class="pHeader">
     <h1>BOOK A FLIGHT</h1>
     </div>
@@ -29,7 +28,6 @@
                 <option value="roundTrip" >Round Trip</option>
                 <option value="OneWay">One Way</option>
             </select>
-
             <div>
             <label class="form-label" for="depart" >Departing From:</label>
             <select id="depart" name="depart">
@@ -37,7 +35,6 @@
                 <option value="LosAngeles">Los Angeles (CA)</option>
             </select>
             </div>
-
             <div>
                 <label class="form-label" >Destination:</label>
                 <select id="destination" name="destination">
@@ -45,22 +42,8 @@
                     <option value="LosAngeles">Los Angeles (CA)</option>
                 </select>
             </div>
-            <div>
-                <label class="form-label" >Amount of Passangers</label>
-                <input type="number" id="aPassanger" name="pass">
-            </div>
-            <div>
-                <label class="form-label" for="aClass">Choose Flight Class</label>
-                <select id="class" name="fClass">
-                    <option value="economy">Economy</option>
-                    <option value="premuinE">Premium Economy</option>
-                    <option value="bussiness">Bussiness</option>
-                    <option value="firstClass">First Class</option>
-                </select>
-            </div>
             <input type="submit" value="Submit" name="submitB" onclick="finalForm()">
         </div>
     </form>
-    
 </body>
 </html>
