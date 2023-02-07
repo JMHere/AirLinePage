@@ -138,3 +138,7 @@ li {
 .Cinfo {
     border: 2px black solid;
 }
+
+.titleP {
+    text-align: center;
+}

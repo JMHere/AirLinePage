@@ -14,6 +14,19 @@
             function myFunction() {
                 document.getElementById("myDropdown").classList.toggle("show");
             }
+            function selectFunction() {
+                let departV = document.getElementById("depart");
+                let destV = document.getElementById("destination");
+
+                if (departV.value == destV.value) {
+                    document.getElementById("destination").disabled = true;
+                    document.getElementById("submitB").disabled = true;
+                } else {
+                    document.getElementById("destination").disabled = false;
+                    document.getElementById("submitB").disabled = false;
+                }
+
+            }
         </script>
     </nav>
 </head>
@@ -24,22 +37,22 @@
     <form action="/ticketP" name="selectF" method="post" id="ticketI">
         <div class="ticketF">
             <label class="form-label" for="type-trip">Choose round trip or one way</label>
-            <select id="selectType" name="selectType">
+            <select id="selectType" name="selectType" >
                 <option value="roundTrip" >Round Trip</option>
                 <option value="OneWay">One Way</option>
             </select>
             <div>
             <label class="form-label" for="depart" >Departing From:</label>
-            <select id="depart" name="depart">
+            <select id="depart" name="depart" onchange="selectFunction()">
                 <option value="SaltLake">Salt Lake (UT)</option>
                 <option value="LosAngeles">Los Angeles (CA)</option>
             </select>
             </div>
             <div>
                 <label class="form-label" >Destination:</label>
-                <select id="destination" name="destination">
-                    <option value="SaltLake">Salt Lake (UT)</option>
+                <select id="destination" name="destination" onchange="selectFunction()">
                     <option value="LosAngeles">Los Angeles (CA)</option>
+                    <option value="SaltLake">Salt Lake (UT)</option>
                 </select>
             </div>
             <input type="submit" value="Submit" name="submitB" onclick="finalForm()">
